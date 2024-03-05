@@ -1,35 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, changeColor] = useState("black");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div
+      className="h-screen flex flex-col justify-end items-center duration-1000"
+      style={{ backgroundColor: color }}
+    >
+      {/* Move this div to the bottom of the webpage */}
+      <div className="flex flex-wrap justify-center gap-2 shadow-md bg-slate-600 px-2 py-2 rounded-xl mt-4">
+        <button
+          className="outline-none px-4 py-2 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#FF5733" }} // Coral
+          onClick={() => changeColor("#FF5733")}
+        >
+          Coral
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#F08080" }} // Light Coral
+          onClick={() => changeColor("#F08080")}
+        >
+          Light Coral
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#00FFFF" }} // Cyan
+          onClick={() => changeColor("#00FFFF")}
+        >
+          Cyan
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#B0E0E6" }} // Powder Blue
+          onClick={() => changeColor("#B0E0E6")}
+        >
+          Powder Blue
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-lg"
+          style={{ backgroundColor: "#FFD700" }} // Gold
+          onClick={() => changeColor("#FFD700")}
+        >
+          Gold
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#00FF00" }} // Lime
+          onClick={() => changeColor("#00FF00")}
+        >
+          Lime
+        </button>
+        {/* Add more buttons with interesting colors */}
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#8A2BE2" }} // Blue Violet
+          onClick={() => changeColor("#8A2BE2")}
+        >
+          Blue Violet
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#FF4500" }} // Orange Red
+          onClick={() => changeColor("#FF4500")}
+        >
+          Orange Red
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#8B0000" }} // Dark Red
+          onClick={() => changeColor("#8B0000")}
+        >
+          Dark Red
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#9932CC" }} // Dark Orchid
+          onClick={() => changeColor("#9932CC")}
+        >
+          Dark Orchid
+        </button>
+        <button
+          className="outline-none px-4 py-1 rounded-md text-white shadow-sm"
+          style={{ backgroundColor: "#4682B4" }} // Steel Blue
+          onClick={() => changeColor("#4682B4")}
+        >
+          Steel Blue
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
